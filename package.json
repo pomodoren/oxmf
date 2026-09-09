@@ -1,0 +1,15 @@
+{
+  "name": "oxmf-website",
+  "version": "0.1.0",
+  "description": "Open Exposure Model Foundation website",
+  "private": true,
+  "scripts": {
+    "build": "node tools/build.mjs",
+    "dev": "npm run build && python3 -m http.server 8000 -d dist",
+    "dev:static": "npm run dev",
+    "preview": "python3 -m http.server 8000 -d dist",
+    "check": "node --check tools/build.mjs && node --check public/js/oxmf.js && node --check public/js/immersive.js && npm run build"
+  },
+  "keywords": ["oxmf", "open-exposure-model", "exposure", "taxonomy"],
+  "author": "Open Exposure Model Foundation"
+}

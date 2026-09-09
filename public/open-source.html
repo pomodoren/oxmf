@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1" name="viewport"/>
+  <title>
+   Open Source | OXMF
+  </title>
+  <meta content="OXM open-source tools: OXM Web, the QGIS Building Plugin, and OXM Loss Calculator." name="description"/>
+  <meta content="#1b7a72" name="theme-color"/>
+  <meta content="Open Source | OXMF" property="og:title"/>
+  <meta content="OXM open-source tools: OXM Web, the QGIS Building Plugin, and OXM Loss Calculator." property="og:description"/>
+  <meta content="website" property="og:type"/>
+  <link href="./assets/oxmf-mark.svg" rel="icon" type="image/svg+xml"/>
+  <link href="./css/oxmf.css" rel="stylesheet"/>
+  <script defer="" src="./js/oxmf.js">
+  </script>
+  <link href="./css/immersive.css" rel="stylesheet"/>
+ </head>
+ <body>
+  <a class="skip-link" href="#main">
+   Skip to content
+  </a>
+  <header class="site-header">
+   <div class="wrap header-inner">
+    <a aria-label="OXM Foundation home" class="brand" href="./index.html">
+     <img alt="" height="38" src="./assets/oxmf-mark.svg" width="38"/>
+     <span>OXM Foundation</span>
+    </a>
+    <nav aria-label="Main navigation" class="desktop-nav">
+     <a href="./index.html">
+      Home
+     </a>
+     <a href="./open-data.html">
+      Open Data
+     </a>
+     <a aria-current="page" href="./open-source.html">
+      Open Source
+     </a>
+     <a href="./projects.html">
+      Projects
+     </a>
+     <a href="./about.html">
+      About us
+     </a>
+    </nav>
+    <details class="mobile-nav">
+     <summary aria-label="Toggle navigation">
+      Menu
+      <span aria-hidden="true">
+       ☰
+      </span>
+     </summary>
+     <nav aria-label="Mobile navigation">
+      <a href="./index.html">
+       Home
+      </a>
+      <a href="./open-data.html">
+       Open Data
+      </a>
+      <a aria-current="page" href="./open-source.html">
+       Open Source
+      </a>
+      <a href="./projects.html">
+       Projects
+      </a>
+      <a href="./about.html">
+       About us
+      </a>
+     </nav>
+    </details>
+   </div>
+  </header>
+  <main id="main">
+   <section class="page-hero page-hero--source">
+    <div class="wrap">
+    <h1>
+     Tools that use the model.
+    </h1>
+    <p class="lead">
+     Explore the model in a browser, inspect buildings in QGIS, and estimate earthquake consequences. All open source.
+    </p>
+    <nav aria-label="Section links" class="actions">
+     <a class="btn secondary" href="./open-data.html">
+      ← Open Data
+     </a>
+     <a class="btn secondary" href="./ecosystem.html">
+      Ecosystem →
+     </a>
+    </nav>
+    </div>
+   </section>
+   <div class="items" id="open-source">
+    <section class="item">
+     <div class="wrap">
+      <div class="item-media">
+       <img alt="The OXM Web dashboard showing a 3D exposure map of Istanbul" loading="lazy" src="assets/gallery/opd-istanbul.png"/>
+      </div>
+      <div class="item-body">
+       <span class="item-index">
+        01
+       </span>
+       <span class="tag">
+        Browser dashboard
+       </span>
+       <h2>
+        OXM Web
+       </h2>
+       <p>
+        A read-only dashboard for exposure maps, building records, district summaries, and earthquake-risk scenarios. Prepared stories link taxonomy, exposure, vulnerability, hazard, and risk. Reads a prepared PostGIS database.
+       </p>
+      </div>
+     </div>
+    </section>
+    <section class="item alt flip">
+     <div class="wrap">
+      <div class="item-media">
+       <img alt="A single building's exposure record open in the OXM viewer" loading="lazy" src="assets/gallery/buildings-in-turkey.png"/>
+      </div>
+      <div class="item-body">
+       <span class="item-index">
+        02
+       </span>
+       <span class="tag">
+        QGIS plugin
+       </span>
+       <h2>
+        OXM Building Plugin
+       </h2>
+       <p>
+        Inspect building exposure inside a QGIS project. Select a footprint and read the exposure data for that building from a connected GDE PostGIS database. Needs QGIS 3.x and Python 3.11+.
+       </p>
+      </div>
+     </div>
+    </section>
+    <section class="item">
+     <div class="wrap">
+      <div class="item-media">
+       <img alt="Buildings shown against earthquake intensity and flood hazard near Vesuvius" loading="lazy" src="assets/gallery/vesuvius-exposure.png"/>
+      </div>
+      <div class="item-body">
+       <span class="item-index">
+        03
+       </span>
+       <span class="tag">
+        Earthquake analysis
+       </span>
+       <h2>
+        OXM Loss Calculator
+       </h2>
+       <p>
+        Combine an exposure model, a ground-motion field, and fragility or vulnerability functions to estimate earthquake damage-state probabilities, structural loss, and fatalities. Flood and cumulative loss are not covered.
+       </p>
+      </div>
+     </div>
+    </section>
+   </div>
+   <section class="section grid-surface section-green">
+    <div class="wrap project-callout">
+     <div>
+      <h2>
+       The tools around the products.
+      </h2>
+      <p>
+       OXM Mini runs source preparation and model runs. OXM Example holds the local study configuration. Exposure Share makes results portable. Document extraction brings new evidence into review.
+      </p>
+     </div>
+     <a class="btn primary" href="./ecosystem.html">
+      See the ecosystem →
+     </a>
+    </div>
+   </section>
+  </main>
+  <footer>
+   <div class="wrap footer-top">
+    <a class="brand" href="./index.html">
+     <img alt="" height="34" src="./assets/oxmf-mark.svg" width="34"/>
+     <span>OXM Foundation</span>
+    </a>
+    <p>
+     A shared foundation for understanding exposure.
+    </p>
+   </div>
+   <div class="wrap footer-bottom">
+    <span>
+     ©
+     <span id="year">
+      2026
+     </span>
+     OXM Foundation
+    </span>
+    <nav aria-label="Footer navigation">
+     <a href="./index.html">
+      Home
+     </a>
+     <a href="./open-data.html">
+      Open Data
+     </a>
+     <a aria-current="page" href="./open-source.html">
+      Open Source
+     </a>
+     <a href="./projects.html">
+      Projects
+     </a>
+     <a href="./about.html">
+      About us
+     </a>
+    </nav>
+   </div>
+  </footer>
+ </body>
+</html>

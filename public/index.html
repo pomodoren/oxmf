@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1" name="viewport"/>
+  <title>
+   OXM Foundation
+  </title>
+  <meta content="An open exposure model that links buildings, people, and structural value, from global data down to individual buildings." name="description"/>
+  <meta content="#1b7a72" name="theme-color"/>
+  <meta content="OXM Foundation" property="og:title"/>
+  <meta content="An open exposure model that links buildings, people, and structural value, from global data down to individual buildings." property="og:description"/>
+  <meta content="website" property="og:type"/>
+  <link href="./assets/oxmf-mark.svg" rel="icon" type="image/svg+xml"/>
+  <link href="./css/oxmf.css" rel="stylesheet"/>
+  <script defer="" src="./js/oxmf.js">
+  </script>
+  <link href="./css/immersive.css" rel="stylesheet"/>
+  <script defer="True" src="./js/immersive.js">
+  </script>
+ </head>
+ <body class="home-page">
+  <a class="skip-link" href="#main">
+   Skip to content
+  </a>
+  <header class="site-header">
+   <div class="wrap header-inner">
+    <a aria-label="OXM Foundation home" class="brand" href="./index.html">
+     <img alt="" height="38" src="./assets/oxmf-mark.svg" width="38"/>
+     <span>OXM Foundation</span>
+    </a>
+    <nav aria-label="Main navigation" class="desktop-nav">
+     <a aria-current="page" href="./index.html">
+      Home
+     </a>
+     <a href="./open-data.html">
+      Open Data
+     </a>
+     <a href="./open-source.html">
+      Open Source
+     </a>
+     <a href="./projects.html">
+      Projects
+     </a>
+     <a href="./about.html">
+      About us
+     </a>
+    </nav>
+    <details class="mobile-nav">
+     <summary aria-label="Toggle navigation">
+      Menu
+      <span aria-hidden="true">
+       ☰
+      </span>
+     </summary>
+     <nav aria-label="Mobile navigation">
+      <a aria-current="page" href="./index.html">
+       Home
+      </a>
+      <a href="./open-data.html">
+       Open Data
+      </a>
+      <a href="./open-source.html">
+       Open Source
+      </a>
+      <a href="./projects.html">
+       Projects
+      </a>
+      <a href="./about.html">
+       About us
+      </a>
+     </nav>
+    </details>
+   </div>
+  </header>
+  <main id="main">
+   <section class="hero-section immersive-hero">
+    <img alt="" class="hero-landscape" fetchpriority="high" height="720" src="assets/gallery/occupancy-andorra.png" width="1280"/>
+    <div aria-hidden="true" class="hero-orbit">
+    </div>
+    <div class="hero wrap">
+     <div class="hero-copy">
+      <h1>
+       Exposure data for every building on Earth.
+      </h1>
+      <p class="lead">
+       OXM is an open model of the built environment. It links each building to its structure, use, occupants, and value. It works at global scale and at the level of a single building.
+      </p>
+      <div class="actions">
+       <a class="btn primary" href="open-data.html">
+        Open Data
+        <span aria-hidden="true">
+         ↗
+        </span>
+       </a>
+       <a class="btn secondary" href="about.html">
+        About us
+        <span aria-hidden="true">
+         →
+        </span>
+       </a>
+      </div>
+     </div>
+    </div>
+   </section>
+   <section aria-label="OXM by the numbers" class="section grid-surface stats">
+    <div class="wrap">
+     <ul class="stat-grid">
+      <li>
+       <span class="stat-num">
+        250+
+       </span>
+       <span class="stat-label">
+        countries &amp; regions
+       </span>
+      </li>
+      <li>
+       <span class="stat-num">
+        3 billion
+       </span>
+       <span class="stat-label">
+        buildings
+       </span>
+      </li>
+      <li>
+       <span class="stat-num">
+        50+ TB
+       </span>
+       <span class="stat-label">
+        of data
+       </span>
+      </li>
+      <li>
+       <span class="stat-num">
+        2 / year
+       </span>
+       <span class="stat-label">
+        releases
+       </span>
+      </li>
+      <li>
+       <span class="stat-num">
+        20+
+       </span>
+       <span class="stat-label">
+        data sources
+       </span>
+      </li>
+      <li>
+       <span class="stat-num">
+        10+
+       </span>
+       <span class="stat-label">
+        tools
+       </span>
+      </li>
+     </ul>
+    </div>
+   </section>
+   <section aria-labelledby="explorer-title" class="exposure-explorer section section-green grid-surface" id="explore-exposure">
+    <div class="wrap">
+     <div class="section-head">
+      <div>
+       <h2 id="explorer-title">
+        Exposure has several layers.
+       </h2>
+      </div>
+      <p>
+       Each building has a location, a shape, a use, and people inside it. It also sits in a hazard landscape.
+      </p>
+     </div>
+     <div aria-label="Explore exposure perspectives" class="explorer-tabs" role="tablist">
+      <button aria-controls="perspective-panel" aria-selected="true" data-perspective="building" id="perspective-building" role="tab" type="button">
+       01
+       <span>
+        Every building
+       </span>
+      </button>
+      <button aria-controls="perspective-panel" aria-selected="false" data-perspective="hazard" id="perspective-hazard" role="tab" tabindex="-1" type="button">
+       02
+       <span>
+        Across hazards
+       </span>
+      </button>
+      <button aria-controls="perspective-panel" aria-selected="false" data-perspective="value" id="perspective-value" role="tab" tabindex="-1" type="button">
+       03
+       <span>
+        What is at stake
+       </span>
+      </button>
+     </div>
+     <div aria-labelledby="perspective-building" class="explorer-stage" id="perspective-panel" role="tabpanel" tabindex="0">
+      <div class="explorer-visual">
+       <img alt="A three-dimensional OXM building visualization with buildings colored by attributes." height="720" id="perspective-image" loading="lazy" src="assets/gallery/occupancy-andorra.png" width="1280"/>
+       <span class="visual-label" id="perspective-label">
+        BUILDING-LEVEL EXPOSURE
+       </span>
+      </div>
+      <div class="explorer-copy">
+       <span class="chapter-number" id="perspective-number">
+        01 / 03
+       </span>
+       <h3 id="perspective-title">
+        A building is more than a footprint.
+       </h3>
+       <p id="perspective-description">
+        Location is the start. Geometry, construction, occupancy, and estimated population turn a building into useful exposure data.
+       </p>
+       <a class="btn primary" href="open-data.html#open-data" id="perspective-link">
+        See the building-level model ↗
+       </a>
+       <p class="explorer-source" id="perspective-source">
+        3D visualization from the OXM presentation. Model attributes may include estimates.
+       </p>
+      </div>
+     </div>
+     <noscript>
+      <p class="section-lead">
+       Explore the other perspectives in the
+       <a href="#oxm-gallery">
+        gallery below
+       </a>
+       .
+      </p>
+     </noscript>
+    </div>
+   </section>
+   <section class="section grid-surface">
+    <div class="wrap project-callout">
+     <div>
+      <h2>
+       What we are working on.
+      </h2>
+      <p>
+       We run OXM in active projects with partners.
+      </p>
+     </div>
+     <a class="btn secondary" href="projects.html">
+      View projects
+      <span aria-hidden="true">
+       ↗
+      </span>
+     </a>
+    </div>
+    <div class="wrap home-case-links immersive-case-grid">
+     <a class="case-lime" href="projects.html">
+
+      <h3>
+       The Hut project
+      </h3>
+      <p>
+       Description coming soon.
+      </p>
+      <span aria-hidden="true" class="round-arrow">
+       ↗
+      </span>
+     </a>
+     <a class="case-lilac" href="projects.html">
+      <h3>
+       LDT Toolbox
+      </h3>
+      <p>
+       Description coming soon.
+      </p>
+      <span aria-hidden="true" class="round-arrow">
+       ↗
+      </span>
+     </a>
+     <a class="case-peach" href="projects.html">
+      <h3>
+       EarthAID
+      </h3>
+      <p>
+       Description coming soon.
+      </p>
+      <span aria-hidden="true" class="round-arrow">
+       ↗
+      </span>
+     </a>
+    </div>
+   </section>
+   <section aria-labelledby="gallery-title" class="section gallery-section grid-surface section-green" id="oxm-gallery">
+    <div class="wrap">
+     <div class="section-head">
+      <div>
+       <h2 id="gallery-title">
+        Gallery of Figures
+       </h2>
+      </div>
+      <p>
+       Maps, model outputs, and methods from the OXM presentation and documentation. Open a figure for detail.
+      </p>
+     </div>
+     <div class="gallery-grid">
+      <figure class="gallery-item">
+       <a aria-label="Enlarge: Buildings in a multi-hazard landscape" class="gallery-open" data-description="Vesuvius-area building occupancy shown alongside flood hazard, historic lava flows, and earthquake intensity." data-gallery="" data-title="Buildings in a multi-hazard landscape" href="assets/gallery/vesuvius-exposure.png">
+        <div class="gallery-image">
+         <img alt="Vesuvius-area building occupancy shown alongside flood hazard, historic lava flows, and earthquake intensity." decoding="async" loading="lazy" src="assets/gallery/vesuvius-exposure.png"/>
+         <span aria-hidden="true" class="gallery-expand">
+          ↗
+         </span>
+        </div>
+        <figcaption>
+         <span class="eyebrow">
+          MULTI-HAZARD EXPOSURE
+         </span>
+         <h3>
+          Buildings in a multi-hazard landscape
+         </h3>
+         <p>
+          Vesuvius-area building occupancy shown alongside flood hazard, historic lava flows, and earthquake intensity.
+         </p>
+        </figcaption>
+       </a>
+      </figure>
+      <figure class="gallery-item">
+       <a aria-label="Enlarge: Flood exposure in Bangkok" class="gallery-open" data-description="A presentation scenario combining a 100-year river flood hazard layer with structural value aggregated by tile." data-gallery="" data-title="Flood exposure in Bangkok" href="assets/gallery/bangkok-flood.png">
+        <div class="gallery-image">
+         <img alt="A presentation scenario combining a 100-year river flood hazard layer with structural value aggregated by tile." decoding="async" loading="lazy" src="assets/gallery/bangkok-flood.png"/>
+         <span aria-hidden="true" class="gallery-expand">
+          ↗
+         </span>
+        </div>
+        <figcaption>
+         <span class="eyebrow">
+          FLOOD EXPOSURE
+         </span>
+         <h3>
+          Flood exposure in Bangkok
+         </h3>
+         <p>
+          A presentation scenario combining a 100-year river flood hazard layer with structural value aggregated by tile.
+         </p>
+        </figcaption>
+       </a>
+      </figure>
+      <figure class="gallery-item">
+       <a aria-label="Enlarge: Building footprints in an urban area" class="gallery-open" data-description="Individual building footprints over a dense urban area, the starting point for building-level exposure." data-gallery="" data-title="Building footprints in an urban area" href="assets/gallery/occupancy-andorra.png">
+        <div class="gallery-image">
+         <img alt="Individual building footprints over a dense urban area." decoding="async" loading="lazy" src="assets/gallery/occupancy-andorra.png"/>
+         <span aria-hidden="true" class="gallery-expand">
+          ↗
+         </span>
+        </div>
+        <figcaption>
+         <span class="eyebrow">
+          BUILDING FOOTPRINTS
+         </span>
+         <h3>
+          Building footprints in an urban area
+         </h3>
+         <p>
+          Individual building footprints over a dense urban area, the starting point for building-level exposure.
+         </p>
+        </figcaption>
+       </a>
+      </figure>
+      <figure class="gallery-item">
+       <a aria-label="Enlarge: Occupancy through the day" class="gallery-open" data-description="How the estimated number of people in buildings shifts between day and night." data-gallery="" data-title="Occupancy through the day" href="assets/gallery/occupancy-per-day.png">
+        <div class="gallery-image">
+         <img alt="A chart of estimated building occupancy across the hours of a day." decoding="async" loading="lazy" src="assets/gallery/occupancy-per-day.png"/>
+         <span aria-hidden="true" class="gallery-expand">
+          ↗
+         </span>
+        </div>
+        <figcaption>
+         <span class="eyebrow">
+          OCCUPANCY
+         </span>
+         <h3>
+          Occupancy through the day
+         </h3>
+         <p>
+          How the estimated number of people in buildings shifts between day and night.
+         </p>
+        </figcaption>
+       </a>
+      </figure>
+      <figure class="gallery-item">
+       <a aria-label="Enlarge: Reconstruction cost" class="gallery-open" data-description="Estimated total reconstruction cost of the building stock, aggregated by area." data-gallery="" data-title="Reconstruction cost" href="assets/gallery/total-reconstruction-cost.png">
+        <div class="gallery-image">
+         <img alt="A map of estimated total reconstruction cost, aggregated by area." decoding="async" loading="lazy" src="assets/gallery/total-reconstruction-cost.png"/>
+         <span aria-hidden="true" class="gallery-expand">
+          ↗
+         </span>
+        </div>
+        <figcaption>
+         <span class="eyebrow">
+          VALUE
+         </span>
+         <h3>
+          Reconstruction cost
+         </h3>
+         <p>
+          Estimated total reconstruction cost of the building stock, aggregated by area.
+         </p>
+        </figcaption>
+       </a>
+      </figure>
+      <figure class="gallery-item">
+       <a aria-label="Enlarge: A shared building taxonomy" class="gallery-open" data-description="Building classes by material, structure, height, and occupancy, aligned to one shared taxonomy." data-gallery="" data-title="A shared building taxonomy" href="assets/gallery/taxonomy.png">
+        <div class="gallery-image">
+         <img alt="A breakdown of building classes by material, structure, height, and occupancy." decoding="async" loading="lazy" src="assets/gallery/taxonomy.png"/>
+         <span aria-hidden="true" class="gallery-expand">
+          ↗
+         </span>
+        </div>
+        <figcaption>
+         <span class="eyebrow">
+          TAXONOMY
+         </span>
+         <h3>
+          A shared building taxonomy
+         </h3>
+         <p>
+          Building classes by material, structure, height, and occupancy, aligned to one shared taxonomy.
+         </p>
+        </figcaption>
+       </a>
+      </figure>
+     </div>
+    </div>
+   </section>
+  </main>
+  <dialog aria-labelledby="gallery-dialog-title" class="gallery-dialog">
+   <div class="gallery-dialog-top">
+    <span class="eyebrow">
+     OXM / GALLERY
+    </span>
+    <button aria-label="Close gallery" autofocus="" class="gallery-close" type="button">
+     Close ×
+    </button>
+   </div>
+   <img alt="" class="gallery-full" src="assets/gallery/vesuvius-exposure.png"/>
+   <div class="gallery-dialog-bottom">
+    <div>
+     <h2 id="gallery-dialog-title">
+     </h2>
+     <p id="gallery-description">
+     </p>
+    </div>
+    <div class="gallery-controls">
+     <button aria-label="Previous figure" data-gallery-prev="" type="button">
+      ←
+     </button>
+     <span id="gallery-position" role="status">
+     </span>
+     <button aria-label="Next figure" data-gallery-next="" type="button">
+      →
+     </button>
+    </div>
+   </div>
+  </dialog>
+  <footer>
+   <div class="wrap footer-top">
+    <a class="brand" href="./index.html">
+     <img alt="" height="34" src="./assets/oxmf-mark.svg" width="34"/>
+     <span>OXM Foundation</span>
+    </a>
+    <p>
+     A shared foundation for understanding exposure.
+    </p>
+   </div>
+   <div class="wrap footer-bottom">
+    <span>
+     ©
+     <span id="year">
+      2026
+     </span>
+     OXM Foundation
+    </span>
+    <nav aria-label="Footer navigation">
+     <a aria-current="page" href="./index.html">
+      Home
+     </a>
+     <a href="./open-data.html">
+      Open Data
+     </a>
+     <a href="./open-source.html">
+      Open Source
+     </a>
+     <a href="./projects.html">
+      Projects
+     </a>
+     <a href="./about.html">
+      About us
+     </a>
+    </nav>
+   </div>
+  </footer>
+ </body>
+</html>

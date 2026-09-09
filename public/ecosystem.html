@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1" name="viewport"/>
+  <title>
+   The OXM ecosystem | OXMF
+  </title>
+  <meta content="How OXM Mini, place examples, Exposure Share, document extraction, and web tools connect source data to exposure workflows." name="description"/>
+  <meta content="#1b7a72" name="theme-color"/>
+  <meta content="The OXM ecosystem | OXMF" property="og:title"/>
+  <meta content="How OXM Mini, place examples, Exposure Share, document extraction, and web tools connect source data to exposure workflows." property="og:description"/>
+  <meta content="website" property="og:type"/>
+  <link href="./assets/oxmf-mark.svg" rel="icon" type="image/svg+xml"/>
+  <link href="./css/oxmf.css" rel="stylesheet"/>
+  <script defer="" src="./js/oxmf.js">
+  </script>
+  <link href="./css/immersive.css" rel="stylesheet"/>
+ </head>
+ <body>
+  <a class="skip-link" href="#main">
+   Skip to content
+  </a>
+  <header class="site-header">
+   <div class="wrap header-inner">
+    <a aria-label="OXM Foundation home" class="brand" href="./index.html">
+     <img alt="" height="38" src="./assets/oxmf-mark.svg" width="38"/>
+     <span>OXM Foundation</span>
+    </a>
+    <nav aria-label="Main navigation" class="desktop-nav">
+     <a href="./index.html">
+      Home
+     </a>
+     <a href="./open-data.html">
+      Open Data
+     </a>
+     <a href="./open-source.html">
+      Open Source
+     </a>
+     <a href="./projects.html">
+      Projects
+     </a>
+     <a href="./about.html">
+      About us
+     </a>
+    </nav>
+    <details class="mobile-nav">
+     <summary aria-label="Toggle navigation">
+      Menu
+      <span aria-hidden="true">
+       ☰
+      </span>
+     </summary>
+     <nav aria-label="Mobile navigation">
+      <a href="./index.html">
+       Home
+      </a>
+      <a href="./open-data.html">
+       Open Data
+      </a>
+      <a href="./open-source.html">
+       Open Source
+      </a>
+      <a href="./projects.html">
+       Projects
+      </a>
+      <a href="./about.html">
+       About us
+      </a>
+     </nav>
+    </details>
+   </div>
+  </header>
+  <main id="main">
+   <section class="page-hero page-hero--eco">
+    <div class="wrap">
+    <h1>
+     From source data to a model you can explore.
+    </h1>
+    <p class="lead">
+     A set of tools supports the work around the OXM products: preparing data, running workflows, adapting them to places, sharing results, and turning gaps into mapping tasks.
+    </p>
+    </div>
+   </section>
+   <section class="section grid-surface">
+    <div class="wrap">
+     <h2>
+      Prepare, model, inspect, improve.
+     </h2>
+     <div class="feature-grid">
+      <article>
+       <span class="number">
+        01
+       </span>
+       <h3>
+        Prepare and model
+       </h3>
+       <p>
+        OXM Mini runs source preparation and exposure processing. Place examples set local inputs and assumptions. The taxonomy and aggregate model supply shared definitions and calculations.
+       </p>
+      </article>
+      <article>
+       <span class="number">
+        02
+       </span>
+       <h3>
+        Inspect and share
+       </h3>
+       <p>
+        OXM Web shows maps, profiles, and stories. Exposure Share turns database results into portable datasets.
+       </p>
+      </article>
+      <article>
+       <span class="number">
+        03
+       </span>
+       <h3>
+        Improve the evidence
+       </h3>
+       <p>
+        Completeness tools show gaps and produce mapper exports. Document extraction is another way to bring structured evidence into review.
+       </p>
+      </article>
+     </div>
+    </div>
+   </section>
+   <section class="section grid-surface section-green">
+    <div class="wrap">
+     <h2>
+      Different jobs, one process.
+     </h2>
+     <div class="ecosystem-tools">
+      <article>
+      <p class="eyebrow">
+       OXM MINI
+      </p>
+       <h3>
+        Run building-level exposure
+       </h3>
+       <p>
+        Keep reusable source preparation separate from country or area processing. Run the pinned exposure processors with Docker Compose and Make, check results, and export portable SpatiaLite datasets.
+       </p>
+       <p class="tool-note">
+        Country, area, and place-level workflows, with recorded commands and logs.
+       </p>
+      </article>
+      <article>
+      <p class="eyebrow">
+       OXM EXAMPLE
+      </p>
+       <h3>
+        Adapt the workflow to a place
+       </h3>
+       <p>
+        Keep a study's configuration, small inputs, local occupancy and cost assumptions, and output locations together.
+       </p>
+       <p class="tool-note">
+        Processing is done by the owning OXM repositories. The example collection supplies place configurations and inputs.
+       </p>
+      </article>
+      <article>
+      <p class="eyebrow">
+       EXPOSURE SHARE
+      </p>
+       <h3>
+        Move results between workflows
+       </h3>
+       <p>
+        Export PostGIS exposure into tiled SpatiaLite databases, merge portable datasets, and convert to Open Exposure Data format with Parquet output.
+       </p>
+       <p class="tool-note">
+        OED aggregation gives one best-estimate record per building from per-archetype records.
+       </p>
+      </article>
+      <article>
+      <p class="eyebrow">
+       EXPOSURE AGENT
+      </p>
+       <h3>
+        Extract evidence from documents
+       </h3>
+       <p>
+        Extract structured exposure constraints from source documents through an operator-driven workflow and API.
+       </p>
+       <p class="tool-note">
+        Needs configured model and embedding services. Extracted evidence is reviewed before it is used.
+       </p>
+      </article>
+     </div>
+    </div>
+   </section>
+   <section class="section grid-surface">
+    <div class="wrap">
+     <h2>
+      Local questions shape the model.
+     </h2>
+     <p class="section-lead">
+      OXM Example holds worked place configurations. They set local occupancy and cost assumptions, small inputs, and output locations, and they run through the same OXM workflows.
+     </p>
+    </div>
+   </section>
+   <section class="section grid-surface section-green">
+    <div class="wrap">
+     <h2>
+      Turn missing attributes into fieldwork.
+     </h2>
+     <p class="section-lead">
+      The place workflow links taxonomy completeness scores to mapping tasks and exports for tools such as JOSM, ODK, and QField. It moves a study from "data is missing" to a specific collection task.
+     </p>
+     <p class="section-lead">
+      Country source coverage and building-level completeness are different questions. A country can have a source input while many buildings still lack observed height, use, or construction.
+     </p>
+     <div class="actions">
+      <a class="btn primary" href="open-data.html#open-data">
+       See OXM Taxonomy ↗
+      </a>
+      <a class="btn secondary" href="open-data.html">
+       See Open Data ↗
+      </a>
+     </div>
+    </div>
+   </section>
+  </main>
+  <footer>
+   <div class="wrap footer-top">
+    <a class="brand" href="./index.html">
+     <img alt="" height="34" src="./assets/oxmf-mark.svg" width="34"/>
+     <span>OXM Foundation</span>
+    </a>
+    <p>
+     A shared foundation for understanding exposure.
+    </p>
+   </div>
+   <div class="wrap footer-bottom">
+    <span>
+     ©
+     <span id="year">
+      2026
+     </span>
+     OXM Foundation
+    </span>
+    <nav aria-label="Footer navigation">
+     <a href="./index.html">
+      Home
+     </a>
+     <a href="./open-data.html">
+      Open Data
+     </a>
+     <a href="./open-source.html">
+      Open Source
+     </a>
+     <a href="./projects.html">
+      Projects
+     </a>
+     <a href="./about.html">
+      About us
+     </a>
+    </nav>
+   </div>
+  </footer>
+ </body>
+</html>
