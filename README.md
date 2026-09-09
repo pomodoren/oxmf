@@ -51,9 +51,11 @@ To add a project, copy a `<section class="item …">` band in `public/projects.h
 
 ### GitHub Pages (via Actions)
 
-Use **GitHub Actions**, not "deploy from a branch". Pages' branch mode can only serve `/` or `/docs` from a committed folder, but this site has a build step and `dist/` is not in git. `.github/workflows/deploy.yml` runs the build on every push to `main` and publishes `dist/` with the official `actions/deploy-pages` flow (no npm dependencies, so it is just `node tools/build.mjs`).
+The source must be **GitHub Actions**, not "Deploy from a branch". Branch mode serves the repo root as-is, which just renders `README.md` — the built site never appears. `.github/workflows/deploy.yml` runs the build on every push to `main` and publishes `dist/` with the official `actions/deploy-pages` flow (no npm dependencies, so it is just `node tools/build.mjs`).
 
-One-time setup: repo **Settings → Pages → Build and deployment → Source: GitHub Actions**. After that, each push to `main` redeploys; the workflow can also be run manually from the Actions tab. The site lands at `https://<user>.github.io/<repo>/`. All links in the HTML are relative, so it works from that sub-path unchanged. For a custom domain, add a one-line `public/CNAME` file with the hostname and set the domain in Settings → Pages.
+The workflow's `configure-pages` step uses `enablement: true`, so its first successful run switches the Pages source to GitHub Actions on its own. If the run fails at that step (org policy can block it), set it by hand once: repo **Settings → Pages → Build and deployment → Source: GitHub Actions**, then re-run the workflow from the Actions tab.
+
+If Pages is still showing the README: confirm the workflow ran green under the Actions tab, then check **Settings → Pages** shows "Source: GitHub Actions" (not a branch). The site lands at `https://<user>.github.io/<repo>/`; all links in the HTML are relative, so it works from that sub-path unchanged. For a custom domain, add a one-line `public/CNAME` file with the hostname and set the domain in Settings → Pages.
 
 Caveat: GitHub Pages ignores `public/_headers` and cannot send custom response headers, so the CSP and security headers in that file are **not enforced on Pages**. They apply on hosts that read `_headers` (Cloudflare Pages, Netlify).
 
